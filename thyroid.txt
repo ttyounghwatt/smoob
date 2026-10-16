@@ -12,8 +12,7 @@
 - [기본 문구]는 해당 항목의 입력이 없을 때만 쓴다. 입력이 있으면 기본 문구를 지우고 입력 소견으로 대체한다. 한 항목에 기본 문구와 이상 소견을 같이 쓰지 않는다.
 - 모든 소견은 먼저 Findings의 해당 항목에 쓰고, Conclusion은 그것을 요약한다. Findings에 없는 내용을 Conclusion에만 쓰지 않는다.
 - 입력에 없는 결절, 크기, 위치, 성상, ETE, 병기, 혈류 등급을 만들지 않는다. (K-TIRADS는 아래 규칙대로 정한다.)
-- 위치, 크기, 개수, 확실성 표현(possible, suspicious 등)과 정도 표현(mild, marked 등)은 입력대로 유지한다. 병변끼리 수치를 바꾸거나 섞지 않는다.
-
+- 위치, 크기, 개수, 확실성 표현(possible, suspicious 등)과 정도 표현(mild, marked 등)은 입력대로 유지한다. 단, 위치 약어는 아래 규칙대로 풀어 쓴다.
 [기본 문구] (해당 항목의 입력이 없을 때만 사용)
 - Clinical Information
   Indication for examination: throat discomfort / thyroid nodule
@@ -60,13 +59,16 @@ Conclusion
 
 [2. Thyroid nodule]
 - 결절이나 기타 소견(낭종 등)이 하나라도 입력되면 No focal lesions... 문구는 쓰지 않고 입력된 소견을 모두 쓴다.
-- 결절 줄 형식: - {위치} ({크기}), {성상} nodule (K-TIRADS {등급}, {의심도})
+- 결절 줄 형식: - {위치} ({크기}), {성상} nodule (K-TIRADS {등급}, {의심도}).
+- - 위치는 반드시 방향, 상중하 형식으로 변환해서 쓴다. 약어(RUP 등)를 그대로 출력하지 않는다.
+  RUP → Rt, upper / RMP → Rt, middle / RLP → Rt, lower
+  LUP → Lt, upper / LMP → Lt, middle / LLP → Lt, lower
+  Isthmus → Isthmus (그대로)
+  Conclusion에서도 동일하게 변환된 형식을 쓴다.
               - 예시 1) L1, upper (0.55 cm), Solid, marked hypoechoic, irregular, nonparallel nodule (K-TIRADS 5, High suspicion)
               - 예시 2) Rt, lower (0.62 cm), Partiallcy cystic nodule (K-TIRADS 3, Low suspicion).
-              - 예시 3) Lt, upper (1.72 cm), Solid, hypoechoic nodule (K-TIRADS 4, Intermediate suspicion).
+              - 예시 3) 입력: 1.3 cm isoechoic solid nodule in RMP 출력: - Rt, middle (1.3 cm), Solid, isoechoic nodule (K-TIRADS 3, Low suspicion)
               
-- 위치 약어: RUP/RMP/RLP = Rt, upper/middle/lower, LUP/LMP/LLP = Lt, upper/middle/lower. isthmus는 그대로 쓴다.
-
 - 성상은 입력된 것만 쓴다. 순서는 구성, 에코, 경계/모양, 방향이다.
 - K-TIRADS는 입력에 등급이 있으면 그것을 쓰고, 없으면 입력된 성상으로 아래 기준에 따라 정한다.
   의심 소견 = microcalcification, PEF, nonparallel, irregular/spiculated/microlobulated margin (macrocalcification은 아님)
