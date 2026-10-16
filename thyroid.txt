@@ -60,17 +60,41 @@ Conclusion
 
 [2. Thyroid nodule]
 - 결절이나 기타 소견(낭종 등)이 하나라도 입력되면 No focal lesions... 문구는 쓰지 않고 입력된 소견을 모두 쓴다.
-- 결절 줄 형식: - {위치} ({크기}), {성상} nodule (K-TIRADS {등급}, {의심도}).
-- - 위치는 반드시 방향, 상중하 형식으로 변환해서 쓴다. 약어(RUP 등)를 그대로 출력하지 않는다.
+- 결절 줄 형식: - {위치} ({크기}), {성상} nodule [with {초점 소견}] (K-TIRADS {등급}, {의심도})
+  입력→출력 예시:
+  1) 입력: Left 1 middle hypoechoic solid nodule with PEF
+     출력: - L1, middle (size not specified), Solid, hypoechoic nodule with PEF (K-TIRADS 5, High suspicion)
+  2) 입력: 1.3 cm isoechoic solid nodule in RMP
+     출력: - Rt, middle (1.3 cm), Solid, isoechoic nodule (K-TIRADS 3, Low suspicion)
+  3) 입력: 0.62 cm partially cystic nodule in RLP
+     출력: - Rt, lower (0.62 cm), Partially cystic nodule (K-TIRADS 3, Low suspicion)
+
+- 결절 위치는 {방향}{번호}, {상중하} 형식이다.
+  - 입력에 번호가 있으면 반드시 유지한다. (Left 1, L1, Lt 1 → L1 / Right 2, R2 → R2)
+  - 번호가 있는 경우 방향은 L 또는 R로 줄여 쓰고 번호를 붙인다. (예: L1, middle)
+  - 번호가 없으면 Rt/Lt로 쓴다. (예: Lt, middle)
+  - 번호를 임의로 만들거나 삭제하지 않는다.
+
   RUP → Rt, upper / RMP → Rt, middle / RLP → Rt, lower
   LUP → Lt, upper / LMP → Lt, middle / LLP → Lt, lower
+  R1, R2 / L1, L2: 번호 결절. 번호 유지 (예: L1 middle → L1, middle)
   Isthmus → Isthmus (그대로)
-  Conclusion에서도 동일하게 변환된 형식을 쓴다.
-              - 예시 1) L1, upper (0.55 cm), Solid, marked hypoechoic, irregular, nonparallel nodule (K-TIRADS 5, High suspicion)
-              - 예시 2) Rt, lower (0.62 cm), Partiallcy cystic nodule (K-TIRADS 3, Low suspicion).
-              - 예시 3) 입력: 1.3 cm isoechoic solid nodule in RMP 출력: - Rt, middle (1.3 cm), Solid, isoechoic nodule (K-TIRADS 3, Low suspicion)
-              
-- 성상은 입력된 것만 쓴다. 순서는 구성, 에코, 경계/모양, 방향이다.
+
+- 성상은 입력된 것만 쓴다. 순서는 아래 틀을 따른다.
+  {구성}, {에코}, {경계/모양}, {방향} nodule with {초점 소견}
+  - 초점 소견(PEF, microcalcification, macrocalcification, comet-tail artifact 등)은
+    nodule 앞에 쓰지 않고 반드시 with ...로 nodule 뒤에 쓴다. 여러 개면 with A and B.
+  - 입력되지 않은 칸은 생략하고, 초점 소견이 없으면 with ...도 생략한다.
+  - 형용사로 쓰는 것: 구성(solid, partially cystic 등), 에코(hypoechoic 등),
+    경계/모양(irregular, spiculated, microlobulated 등), 방향(nonparallel)
+  - 초점 소견(PEF, microcalcification, macrocalcification, comet-tail artifact 등)은
+    형용사 순서에 넣지 않고 nodule 뒤에 with ...로 쓴다.
+    여러 개면 with A and B 또는 with A, B, and C로 쓴다.
+  - PEF nodule, microcalcification nodule처럼 초점 소견이 nodule을 직접 수식하는 표현은 쓰지 않는다.
+
+  입력: Left 1 middle hypoechoic solid nodule with PEF
+  출력: - L1, middle (size not specified), Solid, hypoechoic nodule with PEF (K-TIRADS 5, High suspicion)
+
 - K-TIRADS는 입력에 등급이 있으면 그것을 쓰고, 없으면 입력된 성상으로 아래 기준에 따라 정한다.
   의심 소견 = microcalcification, PEF, nonparallel, irregular/spiculated/microlobulated margin (macrocalcification은 아님)
   입력에 언급되지 않은 의심 소견은 없는 것으로 본다.
