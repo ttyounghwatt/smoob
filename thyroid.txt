@@ -60,12 +60,13 @@ Conclusion
 
 [2. Thyroid nodule]
 - 결절이나 기타 소견(낭종 등)이 하나라도 입력되면 No focal lesions... 문구는 쓰지 않고 입력된 소견을 모두 쓴다.
-- 결절 줄 형식: - {번호}, {위치} ({크기}), {성상} nodule (K-TIRADS {등급}, {의심도})
-  예: - L1, upper (0.55 cm), Solid, marked hypoechoic, irregular, nonparallel nodule (K-TIRADS 5, High suspicion)
-  번호가 없을시: - Lt, upper (0.55 cm), Solid, marked hypoechoic, irregular, nonparallel nodule (K-TIRADS 5, High suspicion)
-- 번호: R/L + 숫자. 입력에 번호가 있으면 그대로 쓰되, 번호가 없으면 Rt, 혹은 Lt, 로 기술 (예: LLP -> Lt, lower).
-- several/multiple 등 복수로 입력된 결절에는 번호를 붙이지 않는다. (아래 복수 결절 규칙)
+- 결절 줄 형식: - {위치} ({크기}), {성상} nodule (K-TIRADS {등급}, {의심도})
+              - 예시 1) L1, upper (0.55 cm), Solid, marked hypoechoic, irregular, nonparallel nodule (K-TIRADS 5, High suspicion)
+              - 예시 2) Rt, lower (0.62 cm), Partiallcy cystic nodule (K-TIRADS 3, Low suspicion).
+              - 예시 3) Lt, upper (1.72 cm), Solid, hypoechoic nodule (K-TIRADS 4, Intermediate suspicion).
+              
 - 위치 약어: RUP/RMP/RLP = Rt, upper/middle/lower, LUP/LMP/LLP = Lt, upper/middle/lower. isthmus는 그대로 쓴다.
+
 - 성상은 입력된 것만 쓴다. 순서는 구성, 에코, 경계/모양, 방향이다.
 - K-TIRADS는 입력에 등급이 있으면 그것을 쓰고, 없으면 입력된 성상으로 아래 기준에 따라 정한다.
   의심 소견 = microcalcification, PEF, nonparallel, irregular/spiculated/microlobulated margin (macrocalcification은 아님)
@@ -79,6 +80,7 @@ Conclusion
 - ETE, T/N 병기, Vascularity가 입력되면 결절 줄 아래에 하위 줄로 쓴다.
   예:   - T1a(minor ETE+) N0b, Vascularity (1)
   입력된 것만 쓰고 표기는 입력 그대로 둔다.
+
 - 번호를 붙이기 어려운 기타 소견(다발성 낭종 등)이나 Others, C2,3 nodule 같은 설명은
   - Others, {입력 내용} 줄로 별도로 쓴다. 의미를 풀어 쓰지 않는다.
   예: 입력 Multiple cysts in both lobes, largest: 1.3 cm -> - Multiple cysts in both lobes, largest 1.3 cm
@@ -94,7 +96,7 @@ Conclusion
 
 [Conclusion]
 각 항목을 별도 줄에 쓰고, 줄 앞에 기호는 붙이지 않는다. 순서는 결절, 부갑상선(이상이 있을 때), 림프절이다.
-1) 번호가 붙은 결절은 번호, 위치, 크기, K-TIRADS만 쓴다. 성상, ETE, 병기, Vascularity는 쓰지 않는다.
+1) 결절은 위치, 크기, K-TIRADS만 쓴다. 성상, ETE, 병기, Vascularity는 쓰지 않는다.
    여러 결절은 Findings처럼  / 로 묶고, K-TIRADS가 다르면 줄을 나눈다.
 2) 결절도 others 소견도 없으면 No focal thyroid lesion.
 3) 실질 소견 및 grade 혹은 변화 (Diffsue thyroid disease). 단, 복수 결절 줄은 {개수 표현} nodules in {위치} {크기} (K-TIRADS n, 의심도)로 쓴다. 성상이 섞여 있고 등급이 다르면 가장 높은 등급 하나를 쓴다.
