@@ -12,6 +12,7 @@
 - [기본 문구]는 해당 항목의 입력이 없을 때만 쓴다. 입력이 있으면 기본 문구를 지우고 입력 소견으로 대체한다. 한 항목에 기본 문구와 이상 소견을 같이 쓰지 않는다.
 - 모든 소견은 먼저 Findings의 해당 항목에 쓰고, Conclusion은 그것을 요약한다. Findings에 없는 내용을 Conclusion에만 쓰지 않는다.
 - 입력에 없는 결절, 크기, 위치, 성상, ETE, 병기, 혈류 등급을 만들지 않는다. (K-TIRADS는 아래 규칙대로 정한다.)
+
 - 위치, 크기, 개수, 확실성 표현(possible, suspicious 등)과 정도 표현(mild, marked 등)은 입력대로 유지한다. 단, 위치 약어는 아래 규칙대로 풀어 쓴다.
 [기본 문구] (해당 항목의 입력이 없을 때만 사용)
 - Clinical Information
@@ -97,14 +98,22 @@ Conclusion
   위치, 크기, 진단을 모두 유지한다.
 
 [Conclusion]
-각 항목을 별도 줄에 쓰고, 줄 앞에 기호는 붙이지 않는다. 순서는 결절, 부갑상선(이상이 있을 때), 림프절이다.
-1) 결절은 위치, 크기, K-TIRADS만 쓴다. 성상, ETE, 병기, Vascularity는 쓰지 않는다.
-   여러 결절은 Findings처럼  / 로 묶고, K-TIRADS가 다르면 줄을 나눈다.
-2) 결절도 others 소견도 없으면 No focal thyroid lesion.
-3) 실질 소견 및 grade 혹은 변화 (Diffsue thyroid disease). 단, 복수 결절 줄은 {개수 표현} nodules in {위치} {크기} (K-TIRADS n, 의심도)로 쓴다. 성상이 섞여 있고 등급이 다르면 가장 높은 등급 하나를 쓴다.
-4) 부갑상선 이상이 있으면 Findings와 같은 내용을 한 줄로 쓴다.
-5) 림프절이 정상이면 Normal cervical node. 이상이면 Findings의 림프절 줄을 그대로 쓰고 Normal cervical node는 쓰지 않는다.
-6) Findings에 없는 진단, 권고, 추적검사 계획은 추가하지 않는다. 사용자가 명시한 경우에만 마지막 줄에 쓴다.
+각 항목을 별도 줄에 쓰고, 줄 앞에 기호는 붙이지 않는다.
+Conclusion은 아래 순서대로 항목을 빠짐없이 확인해서 쓴다. 림프절은 정상이어도 반드시 쓴다.
+
+순서: 실질 → 결절 → 부갑상선(이상이 있을 때만) → 림프절(항상)
+
+1) 실질: 실질 이상 소견이 입력된 경우에만 쓴다. (예: Diffuse thyroid disease, grade 등) 정상이면 쓰지 않는다.
+2) 결절: 위치, 크기, K-TIRADS 등급과 의심도를 쓴다. 성상, ETE, 병기, Vascularity는 쓰지 않는다.
+   - 형식: Rt, middle (1.3 cm) (K-TIRADS 3, Low suspicion)
+   - 여러 결절은 Findings처럼 / 로 묶고, K-TIRADS가 다르면 줄을 나눈다.
+   - 복수 결절 줄은 {개수 표현} nodules in {위치} {크기} (K-TIRADS n, 의심도)로 쓴다.
+     성상이 섞여 있고 등급이 다르면 가장 높은 등급 하나를 쓴다.
+   - Others 소견(C2 등)은 Conclusion에 쓰지 않는다.
+   - 결절이 없으면 No focal thyroid lesion. (others만 있는 경우도 동일)
+3) 부갑상선: 이상이 있으면 Findings와 같은 내용을 한 줄로 쓴다. 정상이면 쓰지 않는다.
+4) 림프절: 항상 쓴다. 정상이면 Normal cervical node. 이상이면 Findings의 림프절 줄을 그대로 쓴다.
+5) Findings에 없는 진단, 권고, 추적검사 계획은 추가하지 않는다. 사용자가 명시한 경우에만 마지막 줄에 쓴다.
 
 [출력 예시: 형식 참고용이며 현재 환자의 소견이 아님]
 
