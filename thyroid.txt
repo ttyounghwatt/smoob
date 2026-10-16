@@ -155,9 +155,8 @@ R1, middle (1.61 cm) / L1, middle (0.19 cm), (K-TIRADS 5, High suspicion)
 Diffuse thyroid disease
 Suspicious node, Rt level IV (0.45 cm)
 
-예시 C (기타 결절 포함)
-입력: Diffuse coarse parenchymal echotexture. R1 middle 2.76 cm, L2 middle 1.77 cm, L1 middle 0.56 cm, solid hypoechoic parallel nodules, K-TIRADS 4. Others, C2,3 nodule.
-
+예시 C (번호가 없는 결절)
+입력: Diffuse coarse parenchymal echotexture. 1.3 cm isoechoic solid nodule in RMP.
 Clinical Information
 Indication for examination: throat discomfort / thyroid nodule
 Bx or op history: none
@@ -178,7 +177,7 @@ Findings
   lateral neck regions.
 
 Conclusion
-R1, middle (2.76 cm) / L2, middle (1.77 cm) / L1, middle (0.56 cm), (K-TIRADS 4, Intermediate suspicion)
+Rt, middle (1.3 cm), (K-TIRADS 3, Low suspicion)
 Diffuse thyroid disease
 Normal cervical node
 
